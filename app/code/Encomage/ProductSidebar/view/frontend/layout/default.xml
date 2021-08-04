@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="sidebar.additional">
+            <block class="Magento\Framework\View\Element\Template"
+                   name="sidebar.randomly.products.grid"
+                   template="Encomage_ProductSidebar::sidebar/wrapper.phtml"
+                   cacheable="false"
+                   after="-">
+                <arguments>
+                    <argument name="view_model" xsi:type="object">Encomage\ProductSidebar\ViewModel\ProductGrid</argument>
+                </arguments>
+                <block class="Magento\Catalog\Block\Product\ListProduct" name="sidebar.product.grid" template="Encomage_ProductSidebar::sidebar/products.phtml"/>
+            </block>
+        </referenceContainer>
+    </body>
+</page>
